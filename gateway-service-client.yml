@@ -22,11 +22,11 @@ spring:
 
         provider:
           keycloak:
-            issuer-uri: http://server.dicap.lan:1111/auth/realms/dicap
+            issuer-uri: https://auth-service-irn6.onrender.com/auth/realms/master
 
 
   zipkin:
-    base-url: http://server.dicap.lan:9411/
+    base-url: https://zipkin-service-wf5t.onrender.com
 
   main:
     web-application-type: servlet
@@ -59,7 +59,7 @@ spring:
             - Path=/city/**
 
         - id: eureka-server
-          uri: http://server.dicap.lan:8761/
+          uri: https://discovery-service-y0y3.onrender.com
           predicates:
             - Path=/eureka/**
           filters:
@@ -91,7 +91,7 @@ spring:
             - Path=/resource/**
 
         - id: zipkin
-          uri: http://server.dicap.lan:9411/
+          uri: https://zipkin-service-wf5t.onrender.com
           predicates:
             - Path=/zipkin/**
 
